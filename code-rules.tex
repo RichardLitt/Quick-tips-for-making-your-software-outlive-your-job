@@ -102,8 +102,9 @@ Academic life is often uncertain,
 particularly for those who work on research software,
 an asset that is essential to modern research \cite{Pearson2025}
 but often underfunded, undercited, and overlooked \cite{Carver2022}.
-The situation has recently worsened dramatically due to changes in the political and economic climate:
-researchers in all disciplines face the loss of funding or jobs,
+In some countries, the situation has recently worsened dramatically due to changes in the political and economic climate,
+and in others such instability is long-standing.
+In such situations, researchers in all disciplines may face the loss of funding or jobs,
 a smaller pool of incoming students,
 and institutional policies that prioritize commercial returns.
 Researchers in non-academic organizations
@@ -111,13 +112,12 @@ such as government laboratories, non-governmental organizations (NGOs), and non-
 as national research strategies are changed
 and associated public funding is redirected or cut entirely \cite{Nature2019,Nature2021,Nature2023,RatRisk2024,Nature2025}.
 
+Ideally, research software projects should be \emph{resilient} to such societal instability.
 Historically,
-open-source research software has been longer-lived than other kinds of open-source software 
-and government involvement has been associated with longer lifespan \cite{Thakur2025}. 
-The challenges of responding to macro-level changes in software development support may be therefore new and unfamiliar to research software developers.
-In this changing environment,
-research software projects must be \emph{resilient}.
-Code should outlast situations such as the author changing workplaces or careers,
+open-source research software has been longer-lived than other kinds of open-source software
+and government involvement has been associated with longer lifespan \cite{Thakur2025}.
+Unfortunately, this may mean that the challenges of responding to macro-level changes in software development support are new and unfamiliar to research software developers,
+and they may not have put structures in place to ensure that their code will outlast situations such as changing workplaces or careers,
 partnerships failing,
 a lab closing down,
 or tooling and digital infrastructure becoming unavailable.
@@ -129,7 +129,7 @@ while others are particularly relevant when a transition or disruption is immine
 (e.g., Rules 3 and 8).
 You do not need to adopt all of them to make things better;
 instead,
-as in all emergencies,
+as in any crisis situation,
 you should do what you can,
 where you are,
 with what you have.
@@ -143,7 +143,7 @@ or the \href{http://archive.org/}{Internet Archive}
 are now widely used to ensure long-term availability.
 However,
 we have not found any guide to make research software resilient
-or to \emph{sunsetting} it (i.e., phasing it out gracefully).
+or to \emph{sunsetting} it (i.e., phasing out development and support gracefully).
 Even if your job is not in danger,
 these rules will help others access and use your code,
 contribute to your project,
@@ -154,34 +154,6 @@ are aligned with the global push for a more equitable assessment of research con
 by initiatives such as \href{https://sfdora.org/}{DORA},
 \href{https://coara.eu/}{coARA},
 and \href{https://adore.software/}{ADORE.software}.
-
-\begin{quote}
-  \noindent
-  \textbf{Collecting wisdom}
-
-  In 2013,
-  the government of Canada ordered the closure of
-  five of the Department of Fisheries and Oceans' seven libraries \cite{Nikiforuk2013}.
-  No one knows how many thousands of volumes of irreplaceable environmental records were destroyed,
-  but even scientists who were directly affected did not make plans in case something similar happened again.
-  In contrast,
-  when faced with the prospect of a populist demagogue becoming president,
-  researchers in Argentina knew from their collective experience what might happen next
-  and took action accordingly \cite{DelBoca2024}.
-
-  We left many suggestions out of this paper due to space constraints
-  or because we felt they would age poorly.
-  What worries us is the ones we didn't include because
-  we have been lucky enough not to have to think about them.
-  In an effort to correct that,
-  we have set up a task force hosted by \href{https://curioss.org}{CURIOSS},
-  \href{https://sustainoss.org}{SustainOSS},
-  and the \href{https://www.researchsoft.org//}{Research Software Alliance},
-  and plan to run monthly meetings
-  to share ideas and support one another.
-  If you have suggestions,
-  please contribute them at \url{https://www.researchsoft.org/tf-succession-planning/}.
-\end{quote}
 
 \section*{Rule 1: Stay within the law}
 
@@ -250,7 +222,7 @@ and sometimes not possible.
   Anyone who has worked in a large bureaucratic organization knows
   the difference between the rules as written and the rules as enforced.
   If you are leaving your position on short notice or under difficult circumstances,
-  you may want to be selective about which forms you fill in proactively
+  you may want to be selective about which steps you take proactively
   and which you just haven't gotten around to yet.
   Members of marginalized groups have often had more practice with these tactics
   than members of privileged groups \cite{Scott1987};
@@ -268,15 +240,16 @@ and how they might be mitigated or resolved \cite{Torr2005}.
 Being explicit about threat models helps you prioritize,
 build consensus with colleagues,
 and check whether you have forgotten something important.
-As with all disaster planning,
+The Open Worldwide Application Security Project (OWASP) provides definitions, guidance, and resources for software threat modeling through the Threat Modeling Project website.\footnote{\url{https://owasp.org/www-project-threat-modeling/}}
+As with all crisis planning,
 making plans before you need them may help you identify risks you can eliminate proactively.
 
 \begin{enumerate}
 \item
   \textbf{Individual threats} affect one or a few members of your team,
   such as an international student having their visa revoked without notice, or a contributor taking extended leave.
-  Especially for software under the maintenance of a single author,
-  individual threats can also come from more mundane career or life changes.
+  % Especially for software under the maintenance of a single author,
+  % individual threats can also come from more mundane career or life changes.
   The most common way to prepare for this is to require everyone to document their work,
   but that rarely works in practice:
   \begin{enumerate}
@@ -291,8 +264,8 @@ making plans before you need them may help you identify risks you can eliminate 
   particularly ones that can be put in place on short notice.
 
 \item
-  \textbf{Leadership threats} are individual threats that affect the project's leader,
-  such as the leader being doxxed or personally targeted in the media because of their work.
+  \textbf{Leadership threats} are individual threats that affect the project's leader.
+  As the public face of a project, they may be more susceptible than other project members to threats such as doxxing or being personally targeted in the media because of their work.
   Rule~3 discusses ways to plan for this.
 
 \item
@@ -301,11 +274,10 @@ making plans before you need them may help you identify risks you can eliminate 
   or your entire field having funding cut.
   These events affect so many people at the same time
   that the rest of the community cannot absorb them.
-  Regional and national governments plans for disasters like these
+  Regional and national governments plan for disasters like these
   by having evacuation plans to get victims to safe(r) places
-  and corollary plans for putting beds in high school gyms
-  and flying in food and emergency medical personnel to help people when they arrive.
-  When government institutions themselves are in a period of upheaval, 
+  and provide them with emergency shelter and supplies.
+  When government institutions themselves are in a period of upheaval,
   mutual aid and civil society organizations may serve as an alternative.
   At the time of writing,
   universities and researchers' professional societies have not started to externally share equivalent planning, if they have started making those plans at all.
@@ -324,13 +296,18 @@ making plans before you need them may help you identify risks you can eliminate 
 
 \end{enumerate}
 
+When performing a threat analysis,
+it is okay to decide that \emph{for your project} there are certain kinds of threats that you do not have a plan for (or the plan is ``abandon the project until further notice'').
+Making those decisions before the threat arises means one less thing to cogitate on during the crisis,
+in the unfortunate case where threat does materialize.
+
 \section*{Rule 3: Decide if you are ending, pausing, or handing off}
 
 Thousands of books describe how to start a business,
 but only a handful discuss handing one over or winding one down,
 and most of those focus on succession within family-owned businesses.
 Guides to running a laboratory say little more \cite{Barker2010,Cohen2018},
-so such wisdom as we have is passed on person-to-person if it is passed on at all. 
+so such wisdom as we have is passed on person-to-person if it is passed on at all.
 Consider the following augmented Software Lifecycle (SLDC), that is based on~\cite{deRSE25} and modified for this paper [Insert Figure 1].
 
 The first step is to decide if work on the project is ending,
@@ -361,6 +338,9 @@ finding out after you have agreed to take something on
 that it is much larger than you realized
 can strain both professional and personal relationships.
 
+If you're not currently facing an abrupt transition in project leadership, developing a \emph{software management plan} now can help clarify the roles and responsibilities of running a project,
+making it easier to reason about filling those roles when a decision about succession, suspension, or abandonment becomes necessary. The Software Sustainability Institute has resources\footnote{\url{https://www.software.ac.uk/guide/writing-and-using-software-management-plan}} to guide the development of software management plans.
+
 Some projects try to ensure longevity by working with a fiscal sponsor such as
 \href{https://numfocus.org/}{NumFOCUS},
 \href{https://sfconservancy.org/}{Software Freedom Conservancy},
@@ -369,12 +349,13 @@ Some projects try to ensure longevity by working with a fiscal sponsor such as
 or other \href{https://sustainoss.org/academic-map/organizations/}{foundations and fiscal hosts}.
 Through fiscal hosting,
 a project can take donations from its community to fund continued maintenance and other costs.
-Universities and governments are generally poorly suited for this due to high overheads and procurement costs;
-fiscal sponsors may take an order of magnitude less.
-In addition,
-a fiscal sponsor places the software in a neutral home
+A fiscal sponsor gives the software a neutral home
 where it is no longer owned by a single research organization,
-which helps to insulate it from changes in policy.
+which can help to insulate it from changes in policy.
+Fiscal sponsors also tend to have lower overhead and procurement costs compared to
+university or government entities.\footnote{That said, if your institution has an Open-Source Program Office (OSPO),
+that can be a source of stability, for example through small internal grants or through
+connections to a network of possible future co-maintainers or successors for your project.}
 
 However,
 fiscal sponsorship is only an option in some countries,
@@ -389,8 +370,8 @@ check with \emph{local} legal experts before taking action.
 
 Making code publicly available does not ensure that other people can use it;
 you maintain all copyright unless you explicitly include a license,
-so they may still need explicit permission
-or may simply be unsure whether they do or not.
+so they may still need explicit permission,
+or may simply be unsure whether they need permission or not.
 The Open Source Initiative (OSI)
 maintains a list of \href{https://opensource.org/licenses}{open source licenses} it has approved;
 the implications of these licenses are widely understood,
@@ -409,6 +390,7 @@ that require people to share their modifications to the software with the commun
 These copyleft licenses can prevent companies from taking advantage of work without giving anything in return,
 but some institutions discourage or disallow their use out of fear that they will constrain commercialization,
 and some companies have policies against using software with some copyleft licenses.
+Note also that if you hope to someday commercialize the research software you have written, consider carefully whether an open-source license will interfere with that eventuality.
 
 More broadly,
 \href{https://creativecommons.org/}{Creative Commons} licenses can be used for documentation or research reports
@@ -439,9 +421,9 @@ as this is where people and automated tools alike will look for it.
 
 \section*{Rule 5: Save everything in multiple places}
 
-Now that you are legally able to share your code, remember LOCKSS: Lots of Copies Keep Stuff Safe.
+Now that you are legally able to share your code, remember LOCKSS: Lots of Copies Keep Stuff Safe.\footnote{A related mnemonic is ``3-2-1'': 3 copies, on 2 different media, 1 in a different location.}
 But copies are not enough:
-the threats to your project are political as well as technological (Rule~2),
+the threats to your project may be political as well as technological (Rule~2),
 so you should ensure that loss of institutional support
 (or worse, that institution turning on you)
 does not mean loss of access.
@@ -473,6 +455,10 @@ trouble with any of them may mean trouble with all of them.
 while currently much smaller,
 is a non-profit based in a different jurisdiction;
 consider mirroring your work there or using it as your primary host.
+Remote Git repositories can also be self- or institution-hosted;
+these typically lack the social and interactive features of the commercial options,
+but (depending on the institution or private host's location/jurisdiction) may provide some protection against the aforementioned correlated threats.
+
 Keep in mind that persistent code archival is not a feature of development platforms.
 Repositories can be altered,
 made private,
@@ -592,6 +578,21 @@ and (more importantly) convince your audience to use it.
 Networking through such events will enable you to build relationships with
 the people most likely to care about your project,
 and it is the best way to ensure that you land well after you leave your current position.
+It can also help to familiarize yourself with \emph{other} tutorial resources that your
+(future) users or contributors might need.
+For example, point users to resources such as Software Carpentry\footnote{\url{https://software-carpentry.org/}} to learn the basics of
+command-line shells \emph{prior to your tutorial or workshop} so that you can spend
+more of that time teaching them about your software.
+
+Deeper, mentored engagements with your software like sprints, class projects,
+or Google Summer of Code\footnote{\url{https://summerofcode.withgoogle.com/}}
+can go even further toward preparing someone else to co-maintain your software
+or take the reins when you step down.
+The obvious trade-off is that (compared to a workshop)
+mentorship is a larger investment of time in a smaller number of people.
+If you have students or post-docs under your direction,
+mentoring them in research software development and maintenance
+alongside your scientific mentorship can also increase your project's chances of longevity.
 
 \begin{quote}
   \noindent
@@ -618,8 +619,8 @@ and numerous books and research papers describe how to organize and run a resear
 Rather than repeating what others have said
 \cite{Sandve2013,Wilson2014},
 this rule is a prioritized checklist of things to do
-\emph{if you have time}.
-If you do not,
+\emph{if you are not facing immanent involuntary changes to your employment}.
+If you are,
 please consult the next rule.
 
 \begin{enumerate}
@@ -655,8 +656,9 @@ please consult the next rule.
 \item
   Document any datasets your project depends on,
   and use CSV, JSON, Parquet, HDF5, or other widely-recognized formats rather than proprietary formats.
-  Include the data in your project if possible;
-  if that is not possible for legal reasons or because of the data's size,
+  Make the data public (if allowed) and easy to access by your users, either by automating its download or
+  incorporating the data in your project if possible.
+  If that is not possible for legal reasons or because of the data's size,
   include URLs with data version IDs (or the date of the last download) in your documentation.
 
 \item
@@ -673,7 +675,7 @@ please consult the next rule.
   can tell if it is working in their environment.
   These do not have to be formal unit tests \cite{Irving2021}:
   even a handful of ``this input should produce this output'' checks
-  can save a lot of frustration \cite{Taschuk2017},
+  can save a lot of frustration \cite{Taschuk2017}.
   Including sample inputs is also helpful,
   and removes dependence on external data sources which may themselves face continuity challenges.
 
@@ -690,6 +692,12 @@ please consult the next rule.
 
 \end{enumerate}
 
+The above suggestions will help to reduce your project's \emph{technical~debt}, but are not a panacea.
+Using descriptive variable names, adding in-line documentation,
+refactoring near-duplicated code into reusable functions, adopting automated code linting,
+setting up continuous integration testing,
+and many other widely-touted best practices will help make your project more resilient
+by making the software less effortful to maintain.
 Note that all of the suggestions above will also help with adoption,
 for the same reason that a tidy restaurant attracts more customers than a messy one.
 In addition,
@@ -724,11 +732,7 @@ If you are short on time:
   to make the content searchable.
   Again,
   AI tools can help create those captions,
-  though some editing is invariably required to clean up mistranslation of technical jargon.
-
-\item
-  Following on from Rule 5, you can \href{https://archive.softwareheritage.org/browse/search/}{search the Software Heritage Archive} with your repository url to check whether it has been saved.
-  If your repository is not present, there is a \href{https://archive.softwareheritage.org/save/}{simple process} to submit it for archival.
+  though some editing is invariably required to clean up mistranscription of technical jargon.
 
 \item
   If you do not have time to bring your project in line with best practices,
@@ -777,8 +781,9 @@ and for healing afterwards \cite{Pennebaker2016,Cullen2022}.
 
 Most importantly,
 take the time to grieve.
-Having years of work come to an abrupt end will take a toll on your mental health;
-many of your colleagues will be suffering as well,
+Having years of work come to an end can take a toll on your mental health,
+even if it stems from a \emph{voluntary} career transition.
+If your transition is triggered by institutional or societal factors, many of your colleagues may be suffering as well,
 and those who haven't been hit (yet) may be affected by survivors' guilt.
 Be angry,
 be sad,
@@ -791,10 +796,13 @@ There is little point surviving today's flood if you drown in tomorrow's.
 The best strategy is to take preventive action,
 and the best way to do that in a research context
 is to become active in professional associations
+(and/or labor unions, if your job class is affiliated with one)
 and push them to take meaningful action.
+Professional societies are often better placed than individuals to exert pressure on government officials,
+and revising a society's bylaws and budget to prioritize safety-net programs (such as bridge funding) for its members can be pursued as well.
 
 Many readers of this paper will find the thought of doing this uncomfortable,
-in large part because 
+in large part because
 voluntary organizations have seen a slow but steady decline in membership over several decades \cite{Putnam2020}.
 Although there are many contributing factors,
 the net result is that professionals aged 30--60
@@ -805,12 +813,33 @@ To see the impact,
 ask yourself who is more likely to run for a seat on your local school board:
 someone with a doctorate in epidemiology or an anti-vax conspiracy theorist?
 
-We have written this paper because we believe that scientific inquiry is a public good and worth fighting for.
-The present climate requires us to focus on preserving what we can,
-but playing defense is just a way to lose more slowly.
-If we work together and accept that we and our institutions need to change,
-we can create a world in which research does not just survive,
-but thrives.
+\section*{Postscript}
+
+In 2013,
+the government of Canada ordered the closure of
+five of the Department of Fisheries and Oceans' seven libraries \cite{Nikiforuk2013}.
+No one knows how many thousands of volumes of irreplaceable environmental records were destroyed,
+but even scientists who were directly affected did not make plans in case something similar happened again.
+In contrast,
+when faced with the prospect of a populist demagogue becoming president,
+researchers in Argentina knew from their collective experience what might happen next
+and took action accordingly \cite{DelBoca2024}.
+
+It is our hope that by documenting some recommendations based on the collective experience and wisdom of researchers across the globe,
+we may empower others to make their own software projects more resilient.
+However, we left many suggestions out of this paper due to space constraints
+or because we felt they would age poorly.
+Other ideas may be omitted because
+we have been lucky enough not to have to think about them.
+In an effort to correct that,
+we have set up a task force hosted by \href{https://curioss.org}{CURIOSS},
+\href{https://sustainoss.org}{SustainOSS},
+and the \href{https://www.researchsoft.org//}{Research Software Alliance},
+and plan to run monthly meetings
+to share ideas and support one another.
+If you have suggestions,
+please contribute them at \url{https://www.researchsoft.org/tf-succession-planning/}.
+
 
 \bibliography{code-rules}
 
